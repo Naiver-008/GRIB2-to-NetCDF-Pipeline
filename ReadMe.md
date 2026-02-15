@@ -34,13 +34,12 @@ The pipeline is designed for **Colab data processing** environments, ensuring ou
 '''bash
 git clone https://github.com/Naiver-008/GRIB2-to-NetCDF-Pipeline.git
 cd GRIB2-to-NetCDF-Pipeline
-'''
 
 2. Run the installation script:
 '''bash
 chmod +x Install_Wgrib2.sh
 ./Install_Wgrib2.sh 
-'''
+
 
 
 3. Run the Python downloader:
@@ -69,4 +68,6 @@ All rights reserved by the authors and UDSM. Redistribution and use are permitte
 ## Authors
 Innocent Junior
 
-Collaborators: Naiver (Dar es Salaam, NUIST)
+## Contact
+innocent.juniour@aol.com
+
