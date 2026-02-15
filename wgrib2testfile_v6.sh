@@ -3,10 +3,10 @@
 # 📄 Personal Information
 # 👨‍💻 Author: Innocent Junior
 # 📅 Date Created: 2025-05-05
-# 🔄 Last Updated: 2026-02-14
+# 🔄 Last Updated: 2026-02-15
 # 📧 Email: innocent.juniour@aol.com
-# 📍 Location: Nanjing, NUIST,Talent Apartment - 812-double room
-# 📍 Location: Dar es Salaam, Majohe,RADA, Waebrania Street, House no.32
+
+
 
 shopt -s nullglob
 
@@ -25,7 +25,7 @@ base_dir="./Data/NCAR_GFS/3-hours"
 output_dir="${base_dir}/1.Processed"
 mkdir -p "$output_dir"
 
-# 📌 Set bounding box (West:East South:North)
+# 📌 Set bounding box (West:East South:North) Longitude(E:W) Latitude(S:N)
 bbox="28:43 -12:0"
 temp_dir="${base_dir}/temp"
 mkdir -p "$temp_dir"
