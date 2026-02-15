@@ -13,6 +13,8 @@ os.makedirs(BASE_DATA_PATH, exist_ok=True)
 # Date range
 start_date = datetime(2016, 1, 1)
 end_date = datetime(2016, 1, 31)
+start_str = start_date.strftime("%Y%m%d")
+end_str = end_date.strftime("%Y%m%d")   
 
 # Months selection
 months = list(range(1, 13))
@@ -75,13 +77,24 @@ while current_date <= end_date:
         print(f"\n📅 Finished month: {month_id} | Checking files...")
 
         missing = [f for f in monthly_expected_files if not os.path.exists(f)]
+        if missing:
+            print(f"⚠️ Missing {len(missing)} files for month {month_id}:")
+            for m in missing:
+                print(f"   - {os.path.basename(m)}")
+        else:
+             # Run bash script directly in Colab
+            print("🚀 Launching processing script...")
+            # Pass to bash script
+            os.system(f"bash wgrib2testfile_v6.sh {start_str} {end_str}")
+            #os.system("bash wgrib2testfile_v6.sh")
+            print("✅ Finished processing with Bash script.\n")
+
         if not missing:
             print("✅ All files for the month are present!")
 
             # Run bash script directly in Colab
             print("🚀 Launching processing script...")
-            start_str = start_date.strftime("%Y-%m-%d")
-            end_str = end_date.strftime("%Y-%m-%d")
+
 
             # Pass to bash script
             os.system(f"bash wgrib2testfile_v6.sh {start_str} {end_str}")
