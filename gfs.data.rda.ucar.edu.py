@@ -1,3 +1,21 @@
+"""
+# 🏢 Company: NaiverCompanies
+# 👨‍💻 Author: Innocent Junior
+# 📅 Date Created: 2026-02-15
+# 🔄 Last Updated: 2026-02-15 
+# 📧 Email: innocent.juniour@aol.com
+# 📍 Location: Dar es Salaam, UDSM, Physics
+
+"""
+
+__author__ = "Innocent Junior"
+__copyright__ = "Copyright 2024", "NaiverCompanies"
+__credits__ = ["A.Iddi", "J.Jumasia"]
+__license__ = "UDSM"
+__maintainer__ = "I.Junior"
+__status__ = "Developed"
+
+# This script downloads GFS data from NCAR for January 2016, organizes it by year, and processes it with a Bash script.
 import os
 import time
 import requests
@@ -81,15 +99,14 @@ while current_date <= end_date:
             print(f"⚠️ Missing {len(missing)} files for month {month_id}:")
             for m in missing:
                 print(f"   - {os.path.basename(m)}")
-        else:
-             # Run bash script directly in Colab
+            # Run bash script directly in Colab
             print("🚀 Launching processing script...")
             # Pass to bash script
             os.system(f"bash wgrib2testfile_v6.sh {start_str} {end_str}")
             #os.system("bash wgrib2testfile_v6.sh")
             print("✅ Finished processing with Bash script.\n")
 
-        if not missing:
+        else:
             print("✅ All files for the month are present!")
 
             # Run bash script directly in Colab
