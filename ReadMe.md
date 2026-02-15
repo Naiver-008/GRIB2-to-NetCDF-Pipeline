@@ -31,21 +31,21 @@ The pipeline is designed for **Colab data processing** environments, ensuring ou
 ## Usage
 
 1. Clone the repository:
-'''bash
+```bash
 git clone https://github.com/Naiver-008/GRIB2-to-NetCDF-Pipeline.git
 cd GRIB2-to-NetCDF-Pipeline
-
+```
 2. Run the installation script:
-'''bash
+```bash
 chmod +x Install_Wgrib2.sh
 ./Install_Wgrib2.sh 
-
+```
 
 
 3. Run the Python downloader:
-'''bash
+```bash
 python gfs_downloader.py
-
+```
 
 Find the processed NetCDF files zipped and saved in:
 /content/drive/MyDrive/NCAR_GFS_Zips
