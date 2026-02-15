@@ -32,7 +32,7 @@ The pipeline is designed for **Colab data processing** environments, ensuring ou
 
 1. Clone the repository:
 '''bash
-git clone https://github.com/yourusername/GRIB2-to-NetCDF-Pipeline.git
+git clone https://github.com/Naiver-008/GRIB2-to-NetCDF-Pipeline.git
 cd GRIB2-to-NetCDF-Pipeline
 '''
 
