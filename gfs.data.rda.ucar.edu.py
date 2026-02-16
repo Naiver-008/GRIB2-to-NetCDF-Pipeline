@@ -31,8 +31,8 @@ os.makedirs(BASE_DATA_PATH, exist_ok=True)
 # Date range
 start_date = datetime(2016, 1, 1)
 end_date = datetime(2016, 1, 31)
-start_str = start_date.strftime("%Y%m%d")
-end_str = end_date.strftime("%Y%m%d")   
+start_str = start_date.strftime("%Y-%m-%d")
+end_str = end_date.strftime("%Y-%m-%d")   
 
 # Months selection
 months = list(range(1, 13))
