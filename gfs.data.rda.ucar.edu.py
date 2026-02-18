@@ -88,7 +88,7 @@ while current_date <= end_date:
                 except Exception as e:
                     print(f"❌ Error downloading {filename}: {e}")
 
-    current_date += timedelta(days=1)
+    #current_date += timedelta(days=1)
 
     # If it's the start of a new month
     if current_date.day == 1:
@@ -119,6 +119,7 @@ while current_date <= end_date:
             print("✅ Finished processing with Bash script.\n")
 
         monthly_expected_files = []
+    current_date += timedelta(days=1)
 
 print("\n✅ All downloads attempted.")
 print(f"📂 Files organized by year in: {os.path.join(BASE_DATA_PATH, '3-hours')}")
